@@ -18,7 +18,8 @@ export const Gallery = () => {
   };
 
   const handleNextButton = () => {
-    if (page < info.pages) setPage((next) => next + 1);
+    const { pages } = info;
+    if (page < pages) setPage((next) => next + 1);
   };
 
   const characters = results.map(({ id, name }: CharacterTypes) => <li key={id}>{name}</li>);
