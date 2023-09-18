@@ -33,12 +33,9 @@ export const Gallery = () => {
       <div className="m-8 grid place-items-center gap-8 md:m-6 md:grid-cols-2 lg:m-4 xl:grid-cols-4">
         {characters}
       </div>
-      <div className="flex gap-4">
-        {/* <button className="bg-red-600 p-2" onClick={handlePrevButton}>
-          &lt;
-        </button> */}
-        <Button sign="&lt;" onClick={handlePrevButton} />
-        <Button sign="&gt;" onClick={handleNextButton} />
+      <div className="flex gap-8">
+        <Button sign="<" onClick={handlePrevButton} />
+        <Button sign=">" onClick={handleNextButton} />
       </div>
     </>
   );
