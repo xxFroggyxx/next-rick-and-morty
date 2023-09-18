@@ -29,3 +29,8 @@ export interface InfoTypes {
   next: string;
   prev: number | null;
 }
+
+export interface CardProps {
+  name: string;
+  image: string;
+}

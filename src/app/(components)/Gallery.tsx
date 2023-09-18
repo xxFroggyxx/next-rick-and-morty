@@ -1,8 +1,9 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { useRickAndMortyCharacters } from '@/hooks/useRickAndMortyCharacters';
-import { CharacterTypes } from '@/data/types';
+import React, { useState } from "react";
+import { useRickAndMortyCharacters } from "@/hooks/useRickAndMortyCharacters";
+import { CharacterTypes } from "@/data/types";
+import { Card } from "./Card";
 
 export const Gallery = () => {
   const [page, setPage] = useState(1);
@@ -22,7 +23,9 @@ export const Gallery = () => {
     if (page < pages) setPage((next) => next + 1);
   };
 
-  const characters = results.map(({ id, name }: CharacterTypes) => <li key={id}>{name}</li>);
+  const characters = results.map(({ id, name, image }: CharacterTypes) => (
+    <Card key={id} name={name} image={image} />
+  ));
 
   return (
     <>
@@ -34,7 +37,9 @@ export const Gallery = () => {
           Next Page
         </button>
       </div>
-      <ul className="text-center">{characters}</ul>
+      <div className="grid place-items-center gap-8 md:grid-cols-2 xl:grid-cols-4">
+        {characters}
+      </div>
     </>
   );
 };
