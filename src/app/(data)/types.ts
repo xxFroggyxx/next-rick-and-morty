@@ -1,3 +1,5 @@
+import { MouseEventHandler } from "react";
+
 interface Location {
   name: string;
   url: string;
@@ -33,4 +35,9 @@ export interface InfoTypes {
 export interface CardProps {
   name: string;
   image: string;
+}
+
+export interface ButtonProps {
+  sign: string;
+  onClick: React.MouseEventHandler;
 }

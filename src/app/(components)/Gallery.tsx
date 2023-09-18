@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useRickAndMortyCharacters } from "@/hooks/useRickAndMortyCharacters";
 import { CharacterTypes } from "@/data/types";
 import { Card } from "./Card";
+import { Button } from "./Button";
 
 export const Gallery = () => {
   const [page, setPage] = useState(1);
@@ -29,16 +30,15 @@ export const Gallery = () => {
 
   return (
     <>
-      <div className="flex gap-4">
-        <button className="bg-red-600 p-2" onClick={handlePrevButton}>
-          Prev Page
-        </button>
-        <button className="bg-green-600 p-2" onClick={handleNextButton}>
-          Next Page
-        </button>
-      </div>
-      <div className="grid place-items-center gap-8 md:grid-cols-2 xl:grid-cols-4">
+      <div className="m-8 grid place-items-center gap-8 md:m-6 md:grid-cols-2 lg:m-4 xl:grid-cols-4">
         {characters}
+      </div>
+      <div className="flex gap-4">
+        {/* <button className="bg-red-600 p-2" onClick={handlePrevButton}>
+          &lt;
+        </button> */}
+        <Button sign="&lt;" onClick={handlePrevButton} />
+        <Button sign="&gt;" onClick={handleNextButton} />
       </div>
     </>
   );
