@@ -1,4 +1,4 @@
-import { ButtonProps } from "../(data)/types";
+import { ButtonProps } from "@/data/types";
 
 export const Button = ({ sign, onClick }: ButtonProps) => {
   return (
