@@ -1,8 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import { CardProps } from "@/data/types";
 
-export const Card = ({ name, image }: CardProps) => {
+interface Props {
+  name: string;
+  image: string;
+}
+
+export const Card = ({ name, image }: Props) => {
   return (
     <div className="flex h-96 w-auto flex-col rounded-b-lg border-2 border-sky-500 text-center">
       <div className="">

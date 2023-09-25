@@ -2,9 +2,33 @@
 
 import React, { useState } from "react";
 import { useRickAndMortyCharacters } from "@/hooks/useRickAndMortyCharacters";
-import { CharacterTypes } from "@/data/types";
 import { Card } from "./Card";
 import { Button } from "./Button";
+
+interface Location {
+  name: string;
+  url: string;
+}
+
+interface Origin {
+  name: string;
+  url: string;
+}
+
+interface CharacterTypes {
+  id: number;
+  created: string;
+  episode: string[];
+  gender: string;
+  image: string;
+  location: Location;
+  name: string;
+  origin: Origin;
+  species: string;
+  status: string;
+  type: string;
+  url: string;
+}
 
 export const Gallery = () => {
   const [page, setPage] = useState(1);
