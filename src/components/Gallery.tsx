@@ -58,8 +58,8 @@ export const Gallery = () => {
         {characters}
       </div>
       <div className="flex gap-8">
-        <Button sign="<" onClick={handlePrevButton} />
-        <Button sign=">" onClick={handleNextButton} />
+        <Button text="<" onClick={handlePrevButton} />
+        <Button text=">" onClick={handleNextButton} />
       </div>
     </>
   );
